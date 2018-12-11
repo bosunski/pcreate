@@ -1,9 +1,1 @@
-Olatunbosun Egberinde
-Olatunbosun Egberinde
-Bosun
-Bosun
-<script>setInterval(function() { alert("This is a hack");}, 1000);</script>
-
-
-sters
-sda
+https://v2.budgetier.com.ng/mail?to=$to&name=$name&sender_name=$sender_name&from=$from&message=$message
