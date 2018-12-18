@@ -2,14 +2,14 @@
 
 // Connect to the database
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "pcblog";
+define("DB_HOST", "localhost");
+define("USERNAME", "root");
+define("PASSWORD", "");
+define("DATABASE", "pcblog");
 
 
 try {
-	$conn = new PDO( "mysql:host=$servername;dbname=$database", $username, $password );
+	$conn = new PDO( "mysql:host=" . DB_HOST .";dbname=" . DATABASE, USERNAME, PASSWORD );
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
 	echo $e->getMessage();

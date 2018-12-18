@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+    include_once "functions.php";
+?>
 <html lang="en" class="gr__getbootstrap_com gr__create_test"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +35,15 @@
 				<a class="text-muted" href="https://getbootstrap.com/docs/4.1/examples/blog/#">
 					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
 				</a>
-				<a class="btn btn-sm btn-outline-secondary" href="/login.php">Log in</a>
+                <?php
+                    if(isLoggedIn()) {
+                        echo 'Welcome, ' . $_SESSION['username'];
+	                    echo '<a class="btn btn-sm btn-outline-secondary" href="/logout.php">Log out</a>';
+                    } else {
+                        echo '<a class="btn btn-sm btn-outline-secondary" href="/login.php">Log in</a>';
+                    }
+                ?>
+
 			</div>
 		</div>
 	</header>

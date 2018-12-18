@@ -1,12 +1,19 @@
 <?php
 	include "includes/header.php";
+
+	if(isLoggedIn()) {
+	    header("location: new_post.php");
+    }
 ?>
     <div class="container">
         <div class="row mb-2">
             <div class="col-md-12">
-                <div class="alert alert-danger">
-
-                </div>
+                    <?php
+                        if(isset($_SESSION['error'])) {
+                            echo '<div class="alert alert-danger">' . $_SESSION['error'] . '</div>';
+                            unset($_SESSION['error']);
+                        }
+                    ?>
                 <form action="process.php" method="post">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Username</label>
