@@ -43,7 +43,8 @@
                         <td>' . $name . '</td>
                         <td>' . $level . '</td>
                         <td>
-                            <a href="delete.php?id=' . $id . '">Delete</a>
+                            <a href="delete.php?id=' . $id . '">Delete</a> | 
+                            <a href="edit.php?id=' . $id . '">Edit</a> 
                         </td>
                     </tr>';
             }
