@@ -38,7 +38,8 @@
                 <?php
                     if(isLoggedIn()) {
                         echo 'Welcome, ' . $_SESSION['username'];
-	                    echo '<a class="btn btn-sm btn-outline-secondary" href="/logout.php">Log out</a>';
+	                    echo '<a class="ml-1 btn btn-sm btn-outline-secondary" href="/new_post.php">New Post</a>';
+	                    echo '<a class="ml-1 btn btn-sm btn-outline-secondary" href="/logout.php">Log out</a>';
                     } else {
                         echo '<a class="btn btn-sm btn-outline-secondary" href="/login.php">Log in</a>';
                     }

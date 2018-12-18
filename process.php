@@ -15,13 +15,16 @@ $user = $result->fetch(PDO::FETCH_ASSOC);
 if(empty($user)) {
 	$_SESSION['error'] = "Username and OR password is incorrect";
 	header("location: login.php");
+	exit;
 }
 
 if($password != $user['password']) {
 	$_SESSION['error'] = "Username and OR password is incorrect";
 	header("location: login.php");
+	exit;
 }
 
 $_SESSION['username'] = $user['username'];
 
 header('location: new_post.php');
+exit;
