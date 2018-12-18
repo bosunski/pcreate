@@ -5,7 +5,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "project_create";
+$database = "pcblog";
 
 
 try {
